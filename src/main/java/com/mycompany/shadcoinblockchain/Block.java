@@ -32,7 +32,7 @@ public class Block {
     
     //new class to calculate hash 
     public String calculateHash(){
-        String calculateHash = StringUtil.applySha256(previousHash+ Long.toString(timeStamp)+data);
+        String calculateHash = StringUtil.applySha256(previousHash+ Long.toString(timeStamp)+Integer.toString(slave)+data);
         return calculateHash;
     }
     
